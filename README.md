@@ -1,5 +1,5 @@
 shorten_url_lite
-Drupal 9.x Module
+Drupal 9.x Module -- It should run on Drupal 8.8+ but I have not tested on anything under 9.0.3
 
 Creates short urls using sites domain
 
