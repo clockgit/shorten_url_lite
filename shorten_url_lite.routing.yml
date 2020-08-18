@@ -1,0 +1,18 @@
+shorten_url_lite.redirect:
+  path: '/sh/{short}'
+  defaults:
+    _controller: 'Drupal\shorten_url_lite\Controller\ShortUrlController::deliver'
+  requirements:
+    _access: 'TRUE'
+shorten_url_lite.view:
+  path: '/view/{short}'
+  defaults:
+    _controller: 'Drupal\shorten_url_lite\Controller\ShortUrlController::view'
+  requirements:
+    _access: 'TRUE'
+shorten_url_lite.form:
+  path: '/new/short'
+  defaults:
+    _controller: 'Drupal\shorten_url_lite\Controller\ShortUrlController::buildForm'
+  requirements:
+    _access: 'TRUE'
