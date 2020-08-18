@@ -1,0 +1,21 @@
+# Short URL routing definition
+short_url.settings_tab:
+  route_name: short_url.settings
+  title: 'Settings'
+  base_route: short_url.settings
+
+entity.short_url.canonical:
+  route_name: entity.short_url.canonical
+  base_route: entity.short_url.canonical
+  title: 'View'
+
+entity.short_url.edit_form:
+  route_name: entity.short_url.edit_form
+  base_route: entity.short_url.canonical
+  title: 'Edit'
+
+entity.short_url.delete_form:
+  route_name:  entity.short_url.delete_form
+  base_route:  entity.short_url.canonical
+  title: Delete
+  weight: 10

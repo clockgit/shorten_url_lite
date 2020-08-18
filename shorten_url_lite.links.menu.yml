@@ -1,0 +1,14 @@
+
+# Short URL menu items definition
+entity.short_url.collection:
+  title: 'Short URL list'
+  route_name: entity.short_url.collection
+  description: 'List Short URL entities'
+  parent: system.admin_structure
+  weight: 100
+
+short_url.admin.structure.settings:
+  title: 'Short URL settings'
+  description: 'Configure Short URL entities'
+  route_name: short_url.settings
+  parent: system.admin_structure

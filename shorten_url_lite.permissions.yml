@@ -1,0 +1,20 @@
+add short url entities:
+  title: 'Create new Short URL entities'
+
+add vanity urls to url entities:
+  title: 'Create new Short URL entities with vanity'
+
+administer short url entities:
+  title: 'Administer Short URL entities'
+  description: 'Allow to access the administration form to configure Short URL entities.'
+  restrict access: true
+
+delete short url entities:
+  title: 'Delete Short URL entities'
+
+edit short url entities:
+  title: 'Edit Short URL entities'
+
+view published short url entities:
+  title: 'View published Short URL entities'
+
