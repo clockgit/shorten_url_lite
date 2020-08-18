@@ -1,0 +1,13 @@
+{
+    "name": "shorten_url_lite",
+    "type": "drupal-module",
+    "description": "A lite weight url shortening service for your domain",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/shorten_url_lite",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/shorten_url_lite",
+        "source": "http://cgit.drupalcode.org/shorten_url_lite",
+    },
+}

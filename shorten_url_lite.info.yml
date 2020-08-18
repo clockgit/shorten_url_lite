@@ -1,0 +1,5 @@
+name: 'Shorten URL Lite'
+type: module
+description: 'A lite weight url shortening service for your domain'
+core: 9.x
+package: 'URL'
