@@ -16,3 +16,5 @@ shorten_url_lite.form:
     _controller: 'Drupal\shorten_url_lite\Controller\ShortUrlController::buildForm'
   requirements:
     _access: 'TRUE'
+  options:
+    no_cache: 'TRUE'
