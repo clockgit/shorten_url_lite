@@ -2,6 +2,10 @@
 
 namespace Drupal\shorten_url_lite\Entity;
 
+use Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException;
+use Drupal\Component\Plugin\Exception\PluginNotFoundException;
+use Drupal\Core\Annotation\Translation;
+use Drupal\Core\Entity\Annotation\ContentEntityType;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\Core\Entity\ContentEntityBase;
@@ -89,12 +93,15 @@ class ShortURL extends ContentEntityBase implements ShortURLInterface {
   }
 
   /**
-   * @return int
+   * Increases value of count by 1.
+   *
+   * @return integer
+   * @throws \Drupal\Core\Entity\EntityStorageException
    */
   public function incrementCount() {
     $this->set('count', $this->getCount()+1);
     $this->save();
-    return $this->get('count')->value;;
+    return $this->get('count')->value;
   }
 
   /**
@@ -242,11 +249,21 @@ class ShortURL extends ContentEntityBase implements ShortURLInterface {
 
     return $fields;
   }
-
-  private function uniqueShort($value)
-  {
-    //TODO search db for value and return false if found.
-    return TRUE;
+  public static function getByCode($short) {
+    try {
+      $entities = \Drupal::entityTypeManager()
+        ->getStorage('short_url')
+        ->loadByProperties(['name' => $short]);
+    } catch (InvalidPluginDefinitionException $e) {
+      //TODO Add error handling
+      return FALSE;
+    } catch (PluginNotFoundException $e) {
+      //TODO Add error handling
+      return FALSE;
+    }
+    if ($entity = reset($entities)) {
+      return $entity;
+    }
+    return FALSE;
   }
-
 }
