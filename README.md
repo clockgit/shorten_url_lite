@@ -13,7 +13,7 @@ It looks like this could be achieved with an event:subscriber - https://www.drup
 Additional Feature:
 1. User with permission 'add vanity urls to url entities' will be able to override the randomly generated short code
 2. View page displays the number of times a short link has been followed.
---- Note browser cache prevents counting the same use multiple times, until cache is clear
+--- Note browser cache prevents counting the same user multiple times, until cache is clear
 3. If Views is enabled the module will load a simple Views config for a page listing short codes, links, counts (/short-url-counts)
 
 
